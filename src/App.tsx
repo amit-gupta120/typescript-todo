@@ -1,14 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import InputField from "./components/InputField";
 
-function App() {
+const App: React.FC = () => {
+  const [todo, setTodo] = useState<String>("");
+
   return (
-    <div>
-      amit
+    <div className="App">
+      <div className="heading">Taskify</div>
 
+      <InputField todo={todo} setTodo={setTodo} />
     </div>
   );
-}
+};
 
 export default App;
